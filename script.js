@@ -57,8 +57,8 @@ function applyConfig() {
   setEl('hero-subtitle', ca.subtitle);
 
   // Campaign card
-  setEl('stat-collected',  formatRupiah(ca.collectedAmount));
-  setEl('stat-target',     formatRupiah(ca.targetAmount));
+  setEl('stat-collected',  formatRupiahAbbr(ca.collectedAmount), null, null, formatRupiah(ca.collectedAmount));
+  setEl('stat-target',     formatRupiahAbbr(ca.targetAmount),    null, null, formatRupiah(ca.targetAmount));
   setEl('meta-days',       ca.daysLeft);
   setEl('meta-location',   or.location);
   setEl('tab-donatur-count', ca.donaturCount.toLocaleString('id-ID'));
@@ -87,12 +87,13 @@ function applyConfig() {
   document.title = `${ca.title} – ${or.name}`;
 }
 
-/** Helper: set textContent atau attribute */
-function setEl(id, text, attr, val) {
+/** Helper: set textContent/innerHTML atau attribute + optional title tooltip */
+function setEl(id, text, attr, val, tooltip) {
   const el = document.getElementById(id);
   if (!el) return;
-  if (attr) { el[attr] = val; }
-  else       { el.innerHTML = text || ''; }
+  if (attr)    { el[attr] = val; }
+  else         { el.innerHTML = text || ''; }
+  if (tooltip) { el.title = tooltip; } // full amount on hover
 }
 
 
@@ -606,6 +607,24 @@ function setupSmoothScroll() {
    ───────────────────────────────────────────────────────── */
 function formatRupiah(amount) {
   return 'Rp ' + amount.toLocaleString('id-ID');
+}
+
+/** Format singkat: 2.847.500.000 → "Rp 2,8 M" | 500.000 → "Rp 500 Rb" */
+function formatRupiahAbbr(amount) {
+  if (amount >= 1_000_000_000) {
+    const val = (amount / 1_000_000_000);
+    const str = Number.isInteger(val) ? val.toString() : val.toFixed(1).replace('.', ',');
+    return 'Rp ' + str + ' M';
+  }
+  if (amount >= 1_000_000) {
+    const val = (amount / 1_000_000);
+    const str = Number.isInteger(val) ? val.toString() : val.toFixed(1).replace('.', ',');
+    return 'Rp ' + str + ' Jt';
+  }
+  if (amount >= 1_000) {
+    return 'Rp ' + Math.round(amount / 1000) + ' Rb';
+  }
+  return formatRupiah(amount);
 }
 
 function formatDateTime(date) {
