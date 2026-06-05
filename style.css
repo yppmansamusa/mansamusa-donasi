@@ -289,9 +289,11 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 }
 
 .stat-value {
-  font-size: clamp(1rem, 4.5vw, 1.45rem); /* menyesuaikan layar sempit otomatis */
+  font-size: clamp(1.25rem, 5vw, 1.8rem); /* lebih besar karena teks sudah singkat */
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.1;
+  white-space: nowrap;
+  letter-spacing: -.5px;
 }
 
 .stat-value.gold { color: var(--gold-600); }
