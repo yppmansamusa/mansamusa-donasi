@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Wakaf Pembangunan Mansamusa Boarding College</title>
+  <meta name="description" content="Program wakaf pembangunan Mansamusa Boarding College. Mari bersama membangun generasi Qurani yang berakhlak mulia dan berdaya guna bagi umat." />
+  <meta name="keywords"    content="wakaf, pesantren, mansamusa, boarding college, donasi, infaq, sedekah, islam, NTB, Lombok" />
+  <meta name="author"      content="Mansamusa Boarding College" />
+
+  <!-- Open Graph (share preview) -->
+  <meta property="og:title"       content="Wakaf Pembangunan Mansamusa Boarding College" />
+  <meta property="og:description" content="Bantu kami membangun generasi Qurani. Donasi sekarang!" />
+  <meta property="og:image"       content="hero.jpg" />
+  <meta property="og:type"        content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="mansamusa2.jpeg" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="header-brand">
+        <img id="header-logo" src="mansamusa2.jpeg" alt="Logo Mansamusa" class="header-logo" />
+        <div class="header-brand-text">
+          <span id="header-org-name" class="header-brand-name">Mansamusa Boarding College</span>
+          <span id="header-org-tagline" class="header-brand-sub">Pesantren & Pendidikan Islam</span>
+        </div>
+      </a>
+      <button class="btn-header-donate" onclick="scrollToDonate()">Donasi Sekarang</button>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
+  <section class="hero">
+    <img id="hero-bg" src="hero.jpg" alt="Mansamusa Boarding College" class="hero-bg" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span id="hero-badge" class="hero-badge">Program Wakaf Aktif</span>
+      <h1 id="hero-title" class="hero-title">Wakaf Pembangunan<br><span>Mansamusa Boarding College</span></h1>
+      <p id="hero-subtitle" class="hero-subtitle">Mari bersama membangun generasi Qurani yang berakhlak mulia dan berdaya guna bagi umat</p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CAMPAIGN CARD
+  ════════════════════════════════════════════ -->
+  <div class="campaign-card-wrap">
+    <div class="campaign-card">
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-label">Terkumpul</div>
+          <div id="stat-collected" class="stat-value gold">Rp 2.847.500.000</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-label">Target</div>
+          <div id="stat-target" class="stat-value dark">Rp 5.000.000.000</div>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill">
+            <div class="progress-dot" id="progress-dot"></div>
+          </div>
+        </div>
+        <div class="progress-labels">
+          <span class="progress-pct" id="progress-pct">0%</span>
+          <span class="progress-100">100%</span>
+        </div>
+      </div>
+
+      <!-- Meta -->
+      <div class="meta-row">
+        <div class="meta-item">
+          <span class="meta-icon">👥</span>
+          <span><strong id="meta-donatur">3.742</strong> Donatur</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">⏱️</span>
+          <span>Sisa <strong id="meta-days">5 Bulan 12 Hari</strong></span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">📍</span>
+          <span id="meta-location">Lombok, NTB</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <button class="btn-donate-main" onclick="scrollToDonate()">
+        🤲 Donasi Sekarang
+      </button>
+
+      <!-- Organizer -->
+      <div class="organizer-card">
+        <img id="organizer-logo" src="mansamusa2.jpeg" alt="Logo" class="organizer-logo" />
+        <div class="organizer-info">
+          <div class="organizer-label">Penggalang Dana</div>
+          <div id="organizer-name" class="organizer-name">Mansamusa Boarding College</div>
+          <span class="badge-verified">✔ Lembaga Terverifikasi</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTENT AREA
+  ════════════════════════════════════════════ -->
+  <div class="content-area">
+
+    <!-- Share Bar -->
+    <div class="share-bar">
+      <div class="share-label">🔗 Sebarkan kebaikan ini:</div>
+      <div class="share-buttons" id="share-bar-btns">
+        <button class="btn-share wa" onclick="shareWhatsApp()">📱 WhatsApp</button>
+        <button class="btn-share fb" onclick="shareFacebook()">📘 Facebook</button>
+        <button class="btn-share"    onclick="copyLink()">🔗 Salin Link</button>
+      </div>
+    </div>
+
+
+    <!-- ── TABS ── -->
+    <div class="tabs-section">
+      <div class="tabs-nav">
+        <button class="tab-btn active" id="tab-keterangan" onclick="switchTab('keterangan')">Keterangan</button>
+        <button class="tab-btn"        id="tab-kabar"      onclick="switchTab('kabar')">Kabar Terbaru</button>
+        <button class="tab-btn"        id="tab-donatur"    onclick="switchTab('donatur')">Donatur (<span id="tab-donatur-count">3742</span>)</button>
+      </div>
+
+      <!-- Tab: Keterangan -->
+      <div class="tab-content active" id="content-keterangan">
+        <div class="keterangan-card">
+          <div class="arabic-basmallah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+          <p id="ket-greeting" class="ket-text"></p>
+          <p id="ket-intro"    class="ket-text"></p>
+          <p id="ket-sub"      class="ket-text"></p>
+          <div class="program-list" id="program-list"></div>
+          <div class="info-box">
+            <span>⚠️</span>
+            <span id="ket-closing"></span>
+          </div>
+          <p class="ket-closing" id="ket-doa"></p>
+          <p class="ket-thanks"  id="ket-thanks"></p>
+        </div>
+      </div>
+
+      <!-- Tab: Kabar Terbaru -->
+      <div class="tab-content" id="content-kabar">
+        <div class="news-list" id="news-list"></div>
+      </div>
+
+      <!-- Tab: Donatur -->
+      <div class="tab-content" id="content-donatur">
+        <div class="donatur-header">
+          <div class="donatur-total" id="donatur-total-text">Menampilkan donatur terbaru</div>
+        </div>
+        <div class="donatur-list" id="donatur-list"></div>
+        <button class="btn-load-more" onclick="loadMoreDonatur()">Muat Lebih Banyak ↓</button>
+      </div>
+    </div>
+
+
+    <!-- ── DONATION FORM ── -->
+    <div id="donate-section">
+
+      <!-- Header form -->
+      <div class="form-header">
+        <div class="form-header-title">🤲 Pilih Nominal Donasi</div>
+        <div class="form-header-sub">Setiap kebaikan sekecil apapun sangat berarti</div>
+      </div>
+
+      <!-- ── STEP 1: Pilih Nominal ── -->
+      <div class="step-panel active" id="step-1">
+        <div class="amount-grid" id="amount-grid">
+          <!-- Diisi oleh JS dari config -->
+        </div>
+
+        <div class="custom-amount-wrap" id="custom-amount-wrap">
+          <div class="input-prefix-wrap">
+            <span class="input-prefix">Rp</span>
+            <input type="tel" id="custom-input" placeholder="Masukkan nominal lain"
+                   oninput="formatCustomAmount(this)" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="selected-summary" id="selected-summary">
+          <span>Nominal dipilih:</span>
+          <span class="summary-amount" id="summary-amount"></span>
+        </div>
+
+        <button class="btn-next" id="btn-next-1" onclick="goToStep2()" disabled>
+          Lanjutkan &nbsp;›
+        </button>
+      </div>
+
+      <!-- ── STEP 2: Data Donatur ── -->
+      <div class="step-panel" id="step-2">
+        <button class="step-back-btn" onclick="goBack(1)">‹ Kembali</button>
+
+        <div class="step-amount-badge">
+          <span>Donasi:</span>
+          <strong id="step2-amount"></strong>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="donor-name">Nama Donatur <span class="req">*</span></label>
+          <input class="form-input" type="text" id="donor-name" placeholder="Nama lengkap Anda" autocomplete="name" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="donor-phone">No. HP / WhatsApp</label>
+          <input class="form-input" type="tel"  id="donor-phone" placeholder="08xxxxxxxxxx" autocomplete="tel" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="donor-email">Alamat Email</label>
+          <input class="form-input" type="email" id="donor-email" placeholder="email@contoh.com" autocomplete="email" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="donor-doa">Pesan / Do'a <span style="font-weight:400;color:var(--text-muted)">(opsional)</span></label>
+          <textarea class="form-input" id="donor-doa" placeholder="Tulis pesan atau do'a untuk program ini..."></textarea>
+        </div>
+
+        <label class="toggle-row">
+          <input type="checkbox" id="is-anon" />
+          <span class="toggle-label">Sembunyikan nama (anonim)</span>
+        </label>
+
+        <br />
+        <button class="btn-next" onclick="goToStep3()">
+          Pilih Metode Pembayaran &nbsp;›
+        </button>
+      </div>
+
+      <!-- ── STEP 3: Pilih Bank ── -->
+      <div class="step-panel" id="step-3">
+        <button class="step-back-btn" onclick="goBack(2)">‹ Kembali</button>
+
+        <div class="step-amount-badge">
+          <span>Donasi: <strong id="step3-amount"></strong></span>
+          <span>Untuk: <strong id="step3-name"></strong></span>
+        </div>
+
+        <div class="payment-title">Pilih Metode Pembayaran:</div>
+        <div class="payment-grid" id="payment-grid">
+          <!-- Diisi oleh JS dari config -->
+        </div>
+
+        <button class="btn-next" id="btn-next-3" onclick="goToStep4()" disabled>
+          🔒 Konfirmasi Donasi &nbsp;›
+        </button>
+      </div>
+
+      <!-- ── STEP 4: Instruksi Pembayaran ── -->
+      <div class="step-panel" id="step-4">
+        <div class="ty-header">
+          <div class="ty-icon">🎉</div>
+          <div class="ty-title">Jazaakallahu Khairan!</div>
+          <div class="ty-sub">Terima kasih, <span class="ty-name" id="ty-name">Sahabat</span></div>
+          <div class="ty-sub">atas donasi yang akan Anda berikan pada program:<br>
+            <strong id="campaign-title-ty">Wakaf Pembangunan Mansamusa Boarding College</strong>
+          </div>
+        </div>
+
+        <!-- Bank info -->
+        <div style="padding: 0 28px">
+          <div class="instr-card">
+            <div class="instr-section-label">💳 Transfer ke Rekening</div>
+            <div class="instr-bank-row" id="instr-bank-row"></div>
+
+            <div class="instr-amount-row">
+              <div>
+                <div class="instr-amount-label">💰 Jumlah Transfer</div>
+                <div class="instr-amount-sub">*(sampai 3 digit terakhir)</div>
+              </div>
+              <div style="text-align:right">
+                <div class="instr-amount-value" id="instr-amount">—</div>
+                <button class="copy-btn" style="margin-top:6px" onclick="copyAmount()">Salin</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="deadline-row">
+            ⏰ Transfer sebelum:
+            <span class="deadline-time" id="deadline-time">—</span>
+          </div>
+
+          <p style="font-size:.82rem;color:var(--gray-700);margin-bottom:16px;line-height:1.7">
+            Harap transfer sesuai nominal di atas <em>(sampai 3 digit terakhir)</em> agar dapat terkonfirmasi otomatis.
+          </p>
+
+          <button class="btn-confirm" onclick="confirmPayment()">
+            ✅ Konfirmasi Pembayaran via WhatsApp
+          </button>
+
+          <div class="ty-share-section">
+            <div class="ty-share-text">🤲 Sebarkan kebaikan ini kepada saudara dan sahabat</div>
+            <div class="ty-share-btns">
+              <button class="btn-share wa"    onclick="shareWhatsApp()">📱 WhatsApp</button>
+              <button class="btn-share fb"    onclick="shareFacebook()">📘 Facebook</button>
+              <button class="btn-share"       onclick="copyLink()">🔗 Salin Link</button>
+            </div>
+          </div>
+
+          <br />
+          <button class="btn-reset" onclick="resetForm()">🔄 Kembali ke Halaman Donasi</button>
+          <br /><br />
+        </div>
+      </div>
+
+    </div>
+    <!-- /#donate-section -->
+
+  </div>
+  <!-- /.content-area -->
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-logo-wrap">
+      <img id="footer-logo" src="mansamusa2.jpeg" alt="Logo" class="footer-logo" />
+      <div>
+        <div id="footer-org-name" class="footer-org-name">Mansamusa Boarding College</div>
+        <div class="footer-org-sub">Membangun Generasi Qurani</div>
+      </div>
+    </div>
+
+    <div class="footer-links" id="footer-links">
+      <a id="footer-wa"    class="footer-link" href="#" target="_blank" rel="noopener">📱 WhatsApp</a>
+      <span class="footer-divider"></span>
+      <a id="footer-email" class="footer-link" href="#" target="_blank" rel="noopener">✉️ Email</a>
+      <span class="footer-divider"></span>
+      <a id="footer-ig"    class="footer-link" href="#" target="_blank" rel="noopener">📸 Instagram</a>
+    </div>
+
+    <div class="footer-copy">
+      © <span id="footer-year">2026</span>
+      <span id="footer-copy-name">Mansamusa Boarding College</span> ·
+      Semua donasi dikelola secara amanah dan transparan
+    </div>
+  </footer>
+
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+
+  <!-- ═══════════════════════════════════════════
+       SCRIPTS — config harus dimuat duluan!
+  ════════════════════════════════════════════ -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
