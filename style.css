@@ -194,7 +194,7 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 40px;
+  padding-bottom: 80px;   /* cukup ruang agar card tidak menutup teks */
   text-align: center;
   padding-left: 16px;
   padding-right: 16px;
@@ -1249,10 +1249,11 @@ textarea.form-input { resize: vertical; min-height: 80px; }
   .header-brand-sub { display: none; }
   .btn-header-donate { padding: 8px 14px; font-size: .78rem; }
 
-  .hero { height: 280px; }
+  .hero { height: 480px; }   /* cukup tinggi agar semua teks hero tampil pada HP apapun */
   .hero-title { font-size: 1.35rem; }
+  .hero-subtitle { font-size: .82rem; }
 
-  .campaign-card { padding: 20px 16px; margin-top: -50px; }
+  .campaign-card { padding: 20px 16px; margin-top: -20px; }  /* overlap kecil agar natural */
   .stats-row { gap: 12px; }
   .stat-value { font-size: 1.1rem; }
 
